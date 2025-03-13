@@ -1,4 +1,5 @@
 from math import isqrt, log, sqrt, exp, floor, ceil
+
 def smoothTest(x,factorBase):
     xAbs=abs(x)
     exponents=[0]*len(factorBase)
@@ -9,7 +10,7 @@ def smoothTest(x,factorBase):
         if xAbs==1:
             break
     return exponents if xAbs==1 else None
-def gnfs(n):
+def algorithm(n):
     if n<2:
         return n
     if is_prime(n):
@@ -75,4 +76,4 @@ def gnfs(n):
                     return factorCandidate
     return None
 
-print(gnfs(3*5))
+print(algorithm(3*5))
